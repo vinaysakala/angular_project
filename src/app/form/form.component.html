@@ -1,0 +1,112 @@
+<div>
+    {{obj|json}} 
+    <app-input [(inputModel)]="obj.username" placeholder="firstName" filter="alpha" name="firstName"
+        errorMessage="{{errorMessage.firstNameerror}}" (onBlur)="getErrorMsgs('obj.username')" (onChange)="getErrorMsgs('obj.username');getErrorMsgs('obj.lastname');"  ></app-input>
+
+    <br><br>
+    <app-input [(inputModel)]="obj.lastname" placeholder="lastName" filter="alphanum" name="lastName"
+        errorMessage="{{errorMessage.lastNameerror}}" (onBlur)="getErrorMsgs('obj.lastname')"  ></app-input>
+    <br><br>
+
+    <app-calender [(calModel)]="obj.calender"  errorMessage="{{errorMessage.calendererror}}" 
+    (onBlur)="getErrorMsgs('obj.calender')" (click)="getErrorMsgs('obj.calender')"></app-calender>
+
+
+    <br>
+    <app-rangecalender [(rangecal)]="obj.clarange"></app-rangecalender>
+    <br><br>
+         <app-clanderpicker></app-clanderpicker>
+    <br><br>
+    
+    <app-droupdown [(dropModels)]="obj.citydrop" [options]="cities" placeholder="select a city" 
+    errorMessage="{{errorMessage.dropdownerror}}" optionValue="code"
+    (onBlur)="getErrorMsgs('obj.citydrop')" (click)="getErrorMsgs('obj.citydrop')"></app-droupdown>
+   
+    <br>
+
+    <app-droupdown [(dropModels)]="obj.flodrop" [options]="flower" optionValue="id" placeholder="select a flower"  
+    errorMessage="{{errorMessage.dropdownfloerror}}" 
+    (onBlur)="getErrorMsgs('obj.flodrop')" (click)="getErrorMsgs('obj.flodrop')"></app-droupdown>
+
+    <br><br>
+
+    <!-- <app-miltiselect [(multiselect)]="obj.selectedCities" ></app-miltiselect>   -->
+    <app-miltiselect [(multiselect)]="obj.selectedCities" optionValue="code" errorMessage="{{errorMessage.multiselecterror}}" 
+    (onBlur)="getErrorMsgs('obj.selectedCities')" (click)="getErrorMsgs('obj.selectedCities')"></app-miltiselect>
+  
+   
+    <br><br>
+
+    <p-button label="clear" severity="danger" class="m-2"  (onClick)="clearvalidation()"></p-button>
+    <br><br>
+    <!-- <p-password [feedback]="false" class="m-2" placeholder="password" required></p-password> -->
+
+    <br><br> 
+    <app-lookup></app-lookup>
+    <br>
+    <div class="flex-auto">
+
+        <p-inputNumber mode="currency" inputId="currency-india" currency="INR" currencyDisplay="code" locale="en-IN"
+            class="m-4"> </p-inputNumber>
+    </div>
+
+    <br>
+    <app-checkbox></app-checkbox>
+    <br>
+
+   
+
+    <p-button  icon="pi pi-external-link" label="Show" class="m-2"></p-button>
+    <p-dialog header="Long Content" [(visible)]="visible" [style]="{ width: '50vw', height: '300px' }" class="m-2">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est laborum.
+        </p>
+
+        <p>
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Nemo enim
+            ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+            qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur,
+            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+            voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+            ut aliquid ex ea
+            commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p>
+
+        <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa qui
+            officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et
+            expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus
+            id quod maxime
+            placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam
+            et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non
+            recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+            consequatur aut perferendis doloribus asperiores repellat.
+        </p>
+    </p-dialog>
+    <br>
+    <br>
+
+
+    <button type="button" pButton class="p-button-primary m-2 " label="Save" (click)="saveData()"></button>
+</div>
+
+<!-- <div *ngIf="showValidation">
+    <p class="alert alert-danger">Please fill out all fields.</p>
+</div> -->
+
+
+
+<!-- 
+<app-groupcoloumntable [groupedColumnTable]="groupedColumnTable"></app-groupcoloumntable> -->

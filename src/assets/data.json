@@ -1,0 +1,32 @@
+
+{
+    "columns": [
+      { "field": "name", "header": "Name" },
+      { "field": "mobileno", "header": "Mobile num" },
+      { "field": "gender", "header": "Gender" },
+      { "field": "emailid", "header": "Email" }
+  ] ,
+  
+  "column" : [
+    { "field": "name", "header": "Name","datatype":"string" },
+    {"field":"date","header":"DOB","datatype":"date"},
+    { "field": "mobileno", "header": "Mobile num" ,"datatype":"number"},
+    { "field": "emailid", "header": "Email" ,"datatype":"string"},
+    { "field": "gender", "header": "Gender" ,"datatype":"string","filterdropdowm":"single"},
+    { "field": "martialstatus", "header": "Martialstatus","datatype":"string" ,"filterdropdowm":"multiple"}
+    
+  ],
+
+
+  "document_grid_coloumn":[
+    { "field": "document_name", "header": "Name","datatype":"string" },
+    {"field":"primary_url","header":"primary url","datatype":"string"},
+    { "field": "secondary_url", "header": "secondary url" ,"datatype":"string"},
+    { "field": "approval", "header": "Approval" ,"datatype":"string","filterdropdowm":"single"},
+    { "field": "authority", "header": "Authority" ,"datatype":"string","filterdropdowm":"single"},
+    { "field": "status", "header": "Status","datatype":"string","filterdropdowm":"single"},
+    { "field": "remarks", "header": "Remarks","datatype":"string" }
+  ]
+
+  
+}

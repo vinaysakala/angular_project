@@ -1,0 +1,17 @@
+<!-- <div>{{timer}}</div> -->
+<!-- image-upload.component.html -->
+<div>
+    <h2>Upload an Image</h2>
+    <input type="file" (change)="onFileSelected($event)">
+    <div *ngIf="base64String">
+      <h3>Base64 String:</h3>
+      <textarea [value]="base64String" rows="10" cols="50" readonly></textarea>
+    </div>
+    <div *ngIf="fileObject">
+      <h3>File Object created from Base64 String:</h3>
+      <p><strong>Name:</strong> {{ fileObject.name }}</p>
+      <p><strong>Type:</strong> {{ fileObject.type }}</p>
+      <p><strong>Size:</strong> {{ fileObject.size }} bytes</p>
+    </div>
+  </div>
+  

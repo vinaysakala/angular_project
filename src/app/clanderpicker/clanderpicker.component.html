@@ -1,0 +1,17 @@
+<app-rangecalender [(rangecal)]="obj.clarange" *ngIf="showCalendarForRange" ></app-rangecalender>
+
+<div>
+  <label>Select Date:</label>
+  <select [(ngModel)]="selectedOption" (change)="onOptionChange()"  class="form-control" [style]="{'width':'250px'}">
+    <option value="today">Today</option>
+    <option value="yesterday">Yesterday</option>
+    <option value="tomorrow">Tomorrow</option>
+    <option value="nextweek">Next week</option>
+    <option value="lastweek">Last week</option>
+    <option value="currentmonth">current Month</option>
+    <option value="lastmonth">pervious Month</option>
+    <option value="nextmonth">next Month</option>
+    <option value="yeartodate">year to date</option>
+    <option value="lastyear">last year</option>
+  </select>
+</div>

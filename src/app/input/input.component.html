@@ -1,0 +1,9 @@
+
+
+<input type="text" pInputText  [(ngModel)]="inputModel" [pKeyFilter]="filter" [placeholder]="placeholder" [disabled]="disabled"
+ (blur)="onBlurControl($event)" (keyup)="send()" (change)="onChangeControl($event)"> 
+
+<span class="text-danger"  >{{errorMessage}}</span>
+
+
+

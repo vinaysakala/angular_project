@@ -1,0 +1,89 @@
+<div>
+    <button pButton pRipple label="table" class="p-button-success m-2" (click)="test()"></button>
+</div>
+
+<div class="emp">
+    <div>
+        <label for="name"><b>Full name:</b></label><br>
+        <app-input [(inputModel)]="obj.name" placeholder="enter name" pKeyFilter="alpha" [disabled]="inputdisabled"
+            errorMessage="{{errorMessage.nameerror}}" (onBlur)="getErrorMsgs('obj.name')"
+            (onChange)="getErrorMsgs('obj.name')"></app-input>
+    </div>
+
+
+    <div>
+        <label><b>DOB:</b></label>
+        <app-calender [(calModel)]="obj.date" errorMessage="{{errorMessage.doberror}}"
+            [disabled]="inputdisabled"></app-calender>
+    </div>
+
+    <div>
+        <label><b>MobileNo:</b></label><br>
+        <app-input [(inputModel)]="obj.mobileno" placeholder="enter your mobileno" pKeyFilter="num"
+            [disabled]="inputdisabled" errorMessage="{{errorMessage.mobilenoerror}}"
+            (onBlur)="getErrorMsgs('obj.mobileno')" (onChange)="getErrorMsgs('obj.mobileno')"></app-input>
+
+    </div>
+
+
+    <div>
+        <label><b>EmailId:</b></label><br>
+        <app-input [(inputModel)]="obj.emailid" placeholder="enter your emailid"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" [disabled]="inputdisabled"
+            errorMessage="{{errorMessage.emailiderror}}" (onBlur)="getErrorMsgs('obj.emailid')"
+            (onChange)="getErrorMsgs('obj.emailid')"></app-input>
+    </div>
+
+
+    <div>
+        <label><b>Gender:</b></label>
+        <app-droupdown [(dropModels)]="obj.gender" [options]="Gender" placeholder="select gender" optionValue="id"
+            [disabled]="inputdisabled" errorMessage="{{errorMessage.gendererror}}" (onBlur)="getErrorMsgs('obj.gender')"
+            (onClick)="getErrorMsgs('obj.gender')"></app-droupdown>
+    </div>
+
+
+    <!-- <div>
+        <label><b>Upload Photo:</b></label><br>
+        <p-fileUpload mode="basic" name="demo[]" accept="image/*" [maxFileSize]="1000000" (onSelect)="onSelect($event)"
+            *ngIf="uploadvivew" [auto]="true" chooseLabel="Upload photo" [disabled]="inputdisabled"></p-fileUpload>
+
+
+        <p-button (click)="onShowDialog()" icon="pi pi-eye" *ngIf="iconview" [disabled]="inputdisabled"></p-button>
+        <p-dialog header="image" [(visible)]='visible' [style]="{width: '70vw'}">
+            <img [src]="urls" alt="Uploaded Image">
+        </p-dialog>
+        <small class="text-danger">{{errorMessage.imgurlserror}}</small>
+    </div> -->
+
+
+    <!-- <div>
+        <label><b>Multiple selects:</b></label><br>
+        <app-miltiselect [(multiselect)]="obj.multiplecities" [disabled]="inputdisabled"
+            errorMessage="{{errorMessage.multiselecterror}}" (onBlur)="getErrorMsgs('obj.multiplecities')"
+            (click)="getErrorMsgs('obj.multiplecities')"></app-miltiselect>
+    </div> -->
+
+
+    <div>
+        <label><b>Martial Status:</b></label><br>
+        <div class="p-field-radiobutton">
+            <p-radioButton name="status" value="single" [(ngModel)]="obj.martialstatus" inputId="status1"
+                [disabled]="inputdisabled"></p-radioButton>
+            <label for="status1"><b>Single</b></label>
+        </div>
+        <div class="p-field-radiobutton">
+            <p-radioButton name="status" value="Married" [(ngModel)]="obj.martialstatus" inputId="status2"
+                [disabled]="inputdisabled"></p-radioButton>
+            <label for="status2"><b>Married</b></label>
+        </div>
+        <small class="text-danger">{{errorMessage.martialstatuserror}}</small>
+    </div>
+
+    <div>
+        <p-button label="Save" class="m-2" (onClick)="Onsave()"></p-button>
+        <p-button label="Clear" severity="danger" class="m-2" (onClick)="clearvalidation()"></p-button>
+
+    </div>
+
+</div>

@@ -1,0 +1,39 @@
+.look{
+    border-radius: 5px;
+   height: 50px;
+    width: 250px;
+}
+
+
+#placeholder{
+    padding-left: 10px;
+}
+.simple-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.simple-table th, .simple-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.simple-table th {
+    background-color: #f2f2f2;
+}
+
+.simple-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.simple-table tr:hover {
+    background-color: #dddddd;
+}
+
+.url-cell {
+    max-width: 200px; /* Adjust this value as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

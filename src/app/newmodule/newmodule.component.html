@@ -1,0 +1,49 @@
+<div class="container">
+    <div>
+        <label for="documentName"><b>Module Name:</b></label><br>
+        <app-input id="documentName" placeholder="Module name" [(inputModel)]="obj.module_name"
+        ></app-input>
+    </div>
+    <div>
+        <label for="documentName"><b>Module Desc:</b></label><br>
+        <textarea rows="5" cols="30" pInputTextarea placeholder="Module Desc" [(ngModel)]="obj.module_desc"></textarea>
+    </div>
+    <div>
+        <label for="status"><b>Status:</b></label>
+        <app-droupdown id="status" placeholder="select status" [options]="status" [(dropModels)]="obj.status" optionValue="id"></app-droupdown>
+    </div>
+</div>
+
+<br>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Sub Module</th>
+        <th>Submodule Desc</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr   *ngFor="let subModule of obj.sub_module; let i = index;">
+        <td>
+          <input pInputText type="text" placeholder="Sub Module"  [(ngModel)]="subModule.submodule_name">
+        </td>
+        <td>
+          <textarea rows="3" cols="20" pInputTextarea placeholder="Module Desc"  [(ngModel)]="subModule.submodule_description"></textarea>
+        </td>
+        <td>
+          <button pButton type="button" label="Delete"  (click)="deleteSubModule(i)"></button>
+          <button pButton type="button" label="Add"  (click)="addSubModule()"></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button (click)="onsave()">save</button>
+  <!-- <p appMyNewDirective>Highlight me!</p> -->
+  <!-- {{birthday |date:'dd-yyyy-MMM' | lowercase}} -->
+  <!-- {{  birthday | date:'fullDate'}} -->
+
+  <p>{{'hello , world' | custompipe }}</p>
+  

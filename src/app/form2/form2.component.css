@@ -1,0 +1,27 @@
+.center-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Change height to min-height */
+  overflow: auto;
+   /* Change to auto to allow scrolling if content exceeds viewport */
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
+}
+
+app-input, app-multiselect, app-dropdown {
+  width: 100%;
+}
+
+
+
+.save{
+  margin: 2px;
+  border-radius: 5px;
+}

@@ -1,0 +1,40 @@
+
+        <span class="p-input-icon-left m-2">
+          <i class="pi pi-search" (click)="showDialog()"></i>
+          <input type="text" pInputText [(ngModel)]="inputModel" (input)="filterCities1()" (keyup)="save()"
+            [disabled]="disabled" />
+        </span>
+        
+        
+        
+        <p-dialog header="data" [(visible)]="visible" [modal]="true" [style]="{ width: '90vw',height:'70vw' }"
+          [draggable]="false" [resizable]="false">
+          <div>
+            <app-table  [columns]="columns" ></app-table>
+          </div>
+        </p-dialog>
+        
+       
+        
+        
+        <!-- app.component.html -->
+        <!-- <div class="p-input-icon-left m-2">
+            <i class="pi pi-search" (click)="showDialog()" ></i>
+            <input type="text" [(ngModel)]="searchTerm" (input)="filterCities()" class="look m-2" placeholder="     Search for a city">
+          </div>
+          
+          <div *ngIf="filteredCities.length > 0">
+            <ul>
+              <li *ngFor="let city of filteredCities">{{ city }}</li>
+            </ul>
+          </div>
+          
+          <div *ngIf="filteredCities.length === 0 && searchTerm.length > 0">
+            No results found.
+          </div> -->
+
+  
+
+
+
+

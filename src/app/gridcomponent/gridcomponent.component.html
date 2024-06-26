@@ -1,0 +1,40 @@
+<button pButton pRipple label="add new" class="p-button-success m-2 " (click)="tests()"></button>
+
+
+
+
+<p-overlayPanel #datePanel>
+  <div class="flex align-content-left  flew-wrap shadow-0 m-1">
+    <div class="date-range-group cursor-pointer">
+      <div class="date-rang-list m-2" (click)="ondateselectionok('today',datePanel) ">
+        Today
+      </div>
+      <div class="date-rang-list m-2" (click)="ondateselectionok('yesterday',datePanel)">
+        Yesterday
+      </div>
+      <div class="date-rang-list m-2" (click)="ondateselectionok('last7days',datePanel)">
+        Last 7 Days
+      </div>
+      <div class="date-rang-list m-2" (click)="ondateselectionok('monthtodate',datePanel)">
+        Month to Date
+      </div>
+      <div class="date-rang-list m-2" (click)="ondateselectionok('yeartodate',datePanel)">
+        Year to Date
+      </div>
+      <div class="date-rang-list m-2" (click)="ondateselectionok('prevweek',datePanel)">
+        Previous Week
+      </div>
+      <div class="date-rang-list m-2" (click)="ondateselectionok('prevmon',datePanel)">
+        Previous Month
+      </div>
+      <div class="date-rang-list m-2" (click)="ondateselectionok('prevyear',datePanel)">
+        Previous Year
+      </div>
+    </div>
+  </div>
+</p-overlayPanel>
+
+<input class="input" (click)="datePanel.toggle($event)" [(ngModel)]="dateInputModel" placeholder="Select Dates">
+
+<button pButton pRipple label="get data" class="p-button-success m-2 " (click)="getdata()"></button>
+<app-table [columns]="columns" [data]="getstudentdata"></app-table>

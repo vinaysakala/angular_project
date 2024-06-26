@@ -1,0 +1,279 @@
+<!-- <p-table [columns]="cols" [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{ col.header }}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns">
+                {{ rowData[col.field] }}
+            </td>
+        </tr>
+    </ng-template>
+</p-table> -->
+
+
+<!-- <div class="card">
+    <p-table [columns]="" [value]="data" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+              
+            <th *ngFor="let col of columns">
+                {{ col.header }}
+            </th> -->
+<!-- <ng-template *ngFor="let col of columns">
+            <th style="min-width:15rem" pSortableColumn="col.field" >
+                <div class="flex align-items-center">
+                    {{col.header}}
+                    <p-sortIcon field="name"></p-sortIcon>
+                    <p-columnFilter type="text" field="col.field" display="menu"></p-columnFilter>
+                </div>
+            </th>
+           </ng-template> -->
+
+<!-- <th style="min-width:15rem" pSortableColumn="gender">
+                <div class="flex align-items-center">
+                    Gender
+                    <p-sortIcon field="gender"></p-sortIcon>
+                    <p-columnFilter type="text" field="gender" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th style="min-width:15rem" pSortableColumn="emailid">
+                <div class="flex align-items-center">
+                    Email
+                    <p-sortIcon field="emailid"></p-sortIcon>
+                    <p-columnFilter type="text" field="emailid" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th style="min-width:15rem">
+                <div class="flex align-items-center" pSortableColumn="martialstatus">
+                    Martialstatus
+                    <p-sortIcon field="martialstatus"></p-sortIcon>
+                    <p-columnFilter type="text" field="martialstatus" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th style="min-width:15rem">
+                <div class="flex align-items-center" pSortableColumn="mobileno">
+                   Mobileno
+                   <p-sortIcon field="mobileno"></p-sortIcon>
+                    <p-columnFilter type="text" field="mobileno" display="menu"></p-columnFilter>
+                    
+                </div>
+            </th> -->
+<!-- </ng-template> -->
+<!-- <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{product.name}}</td>
+                <td>{{product.gender}}</td>
+                <td>{{product.emailid}}</td>
+                <td>{{product.martialstatus}}</td>
+                <td>{{product.mobileno}}</td>
+            </tr>
+        </ng-template> -->
+<!-- <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of data">
+                {{ rowData[col.field] }}
+            </td>
+        </tr>
+    </ng-template>
+    </p-table>
+</div> -->
+
+
+
+<!-- <div class="card">
+    <p-table [columns]="columns" [value]="data" [tableStyle]="{'min-width': '60rem'}">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns" > -->
+<!-- <ng-container *ngIf="col.header === 'Mobile num'; else defaultField"> 
+                <div class="flex align-items-center" pSortableColumn="{{col.field}}">
+                    {{col.header}}
+                    <p-sortIcon field="{{col.field}}"></p-sortIcon>
+                  
+                    <p-columnFilter type="numeric" field="{{col.feild}}" display="menu" ></p-columnFilter>
+                 </div>
+              </ng-container> -->
+
+<!-- <ng-container *ngIf="col.header === 'DOB'; else defaultField" >
+                <div class="flex align-items-center" pSortableColumn="{{col.field}}">
+                    {{col.header}}
+                    <p-sortIcon field="{{col.field}}"></p-sortIcon>
+                    <p-columnFilter type="date" field="{{col.feild}}" display="menu"></p-columnFilter>
+                 </div>
+              </ng-container> -->
+
+<!-- <ng-container *ngIf="col.header === 'Gender'; else defaultField"  >   
+                <div class="flex align-items-center" pSortableColumn="{{col.field}}">
+                    {{col.header}}
+                    <p-sortIcon field="{{col.field}}"></p-sortIcon>
+                    <p-columnFilter field="{{col.gender}}" matchMode="in" display="menu" [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
+                        <ng-template pTemplate="header">
+                            <div class="px-3 pt-3 pb-0">
+                                <span class="font-bold">gender Picker</span>
+                            </div>
+                        </ng-template>
+                        <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                            <p-dropdown [ngModel]="value" [options]="representatives" placeholder="Any" (onChange)="filter($event.value)" optionLabel="name">
+                                <ng-template let-option pTemplate="item">
+                                    <div class="inline-block vertical-align-middle">
+                                        <span class="ml-1 mt-1">{{ option.name }}</span>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
+                        </ng-template>
+                    </p-columnFilter>
+                 </div>
+              </ng-container>
+              
+              <ng-template #defaultField> -->
+<!-- {{ rowData[col.field] }} -->
+<!-- <div class="flex align-items-center" pSortableColumn="{{col.field}}">
+                    {{col.header}}
+                    <p-sortIcon field="{{col.field}}"></p-sortIcon>
+                     <p-columnFilter type="text" field="{{col.field}}" display="menu"></p-columnFilter>
+                 </div>
+              </ng-template> -->
+
+
+<!-- </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData>
+        <tr>
+            <td *ngFor="let col of columns">
+              
+              <ng-container *ngIf="col.field === 'dob'; else defaultField">
+               
+                {{ rowData[col.field] | date: 'MM/dd/yyyy' }}
+              </ng-container>
+              
+              <ng-template #defaultField>
+                {{ rowData[col.field] }}
+              </ng-template>
+            </td>
+          </tr>
+      </ng-template>
+    </p-table>
+  </div> -->
+
+
+
+<div class="card">
+    <p-table [columns]="columns" [value]="data" [tableStyle]="{'min-width': '60rem'}"   
+    [rows]="5"
+    [showCurrentPageReport]="true"
+    [rowsPerPageOptions]="[5, 10, 15]"
+   
+    [paginator]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    >
+        <!-- Header Template -->
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns">
+                    <div class="flex align-items-center" pSortableColumn="{{col.field}}">
+                        {{ col.header }}
+                        <p-sortIcon field="{{ col.field }}"></p-sortIcon>
+
+                        <!-- Use different filter types based on the column field -->
+                        <ng-container *ngIf="col.datatype === 'date'">
+                            <!-- Date Filter -->
+                            <p-columnFilter type="date" field="dob" display="menu"></p-columnFilter>
+
+
+                        </ng-container>
+
+                        <ng-container *ngIf="col.datatype === 'number'">
+                            <!-- Numeric Filter -->
+                            <p-columnFilter type="numeric" field="mobileno" display="menu"></p-columnFilter>
+                        </ng-container>
+
+                        <!-- <ng-container *ngIf="col.field === 'gender'">
+                           
+                            <p-columnFilter type="text" field="gender" display="menu" matchMode="equals">
+                                <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                                    <p-dropdown [ngModel]="value" [options]="genderOptions" placeholder="Any"
+                                        (onChange)="filterCallback($event.value, filter)">
+                                        <ng-template let-option pTemplate="item">
+                                            <div class="inline-block vertical-align-middle">
+                                                <span class="ml-1 mt-1">{{ option.value }}</span>
+                                            </div>
+                                        </ng-template>
+                                    </p-dropdown>
+                                </ng-template>
+                            </p-columnFilter>
+                        </ng-container> -->
+
+                        <ng-container *ngIf="col.datatype === 'string'">
+                            <!-- Numeric Filter -->
+
+                            <ng-container *ngIf="col.filterdropdowm; else text">
+                                <p-columnFilter [field]="col.field" display="menu" [matchMode]="col.matchMode"
+                                    [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
+                                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">{{col.uniqueValues|json}}
+                                        <p-dropdown *ngIf="col.filterdropdowm=='single'" [ngModel]="value"
+                                            [options]="col.uniqueValues" placeholder="Any"
+                                            (onChange)="filterCallback($event.value, filter)">
+                                            <!-- <ng-template let-option pTemplate="item">
+                                                <div class="inline-block vertical-align-middle">
+                                                    <span class="ml-1 mt-1">{{ option.label }}</span>
+                                                </div>
+                                            </ng-template> -->
+                                        </p-dropdown>
+                                        <p-multiSelect *ngIf="col.filterdropdowm=='multiple'" [ngModel]="value"
+                                            [options]="col.uniqueValues" placeholder="Any"
+                                            (onChange)="filterCallback($event.value, filter)">
+
+                                        </p-multiSelect>
+                                    </ng-template>
+                                </p-columnFilter>
+                            </ng-container>
+                            <ng-template #text>
+                                <p-columnFilter type="text" field="{{col.field}}" display="menu"></p-columnFilter>
+                            </ng-template>
+                        </ng-container>
+
+
+
+
+                    </div>
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </ng-template>
+
+
+
+        <!-- Body Template -->
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+
+                <td *ngFor="let col of columns">
+                    <ng-container *ngIf="col.field === 'date'">
+                        <ng-container>
+
+                            {{ rowData[col.field] | date: 'YYYY/MM/dd' }}
+                        </ng-container>
+                    </ng-container>
+
+                    <ng-container *ngIf="col.field !== 'date'">
+                        {{ rowData[col.field] }}
+                    </ng-container>
+                </td>
+                <td>
+                    <ng-container>
+                        <button pButton type="button" label="edit" (click)="edit(rowData.name)"></button>
+                    </ng-container>
+                </td>
+            </tr>
+        </ng-template>
+        
+    </p-table>
+</div>

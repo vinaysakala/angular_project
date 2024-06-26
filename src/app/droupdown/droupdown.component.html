@@ -1,0 +1,9 @@
+
+  <div class="form-group" >
+
+    <p-dropdown [(ngModel)]="dropModels" optionLabel="name" [options]="options" [showClear]="false" [disabled]="disabled"
+    [optionValue]="optionValue" [placeholder]="placeholder"  [style]="{'width':'200px'}"
+    (blur)="onBlurControl($event)" (ngModelChange)="send()"></p-dropdown>
+
+  </div>
+  <span class="text-danger">{{errorMessage}}</span>

@@ -1,0 +1,79 @@
+<div>
+    <p-button label="Submit"  (onClick)="save()" class="save"></p-button>
+    <p-button label="clear"  (onClick)="clear()" ></p-button>
+    <p-button label="grid view"  class="m-2" (onClick)="grideview()" ></p-button>
+</div>
+
+
+
+<p-card class="center-card">
+    <div class="container">
+        <div>
+            <label for="documentName"><b>Document Name:</b></label><br>
+            <app-input id="documentName" placeholder="Document name"  [(inputModel)]="obj.document_name"
+            errorMessage="{{errormessage.documentNameerror}}" (onBlur)="getErrorMsgs('obj.documentName')"
+            (onChange)="getErrorMsgs('obj.documentName')"></app-input>
+        </div>
+        <div>
+            <label for="primaryUrl"><b>Primary Url:</b></label><br>
+            <app-input id="primaryUrl" placeholder="Primary Url" [(inputModel)]="obj.primary_url"
+            errorMessage="{{errormessage.primaryUrlerror}}" (onBlur)="getErrorMsgs('obj.primaryUrl')"  
+            (onChange)="getErrorMsgs('obj.primaryUrl')"></app-input>
+        </div>
+        <div>
+            <label for="secondaryUrl"><b>Secondary Url:</b></label><br>
+            <app-input id="secondaryUrl" placeholder="Secondary Url" [(inputModel)]="obj.secondary_url"></app-input>
+        </div>
+
+        <div>
+            <div class=" flex justify-content-center">
+                <div class="flex flex-wrap gap-3">
+                    <label ><b>Approval Required:</b></label><br>
+                    <div class="flex align-items-center">
+                        <p-radioButton name="Approval" value=3 [(ngModel)]="obj.Approval"
+                            inputId="ingredient1"></p-radioButton>
+                        <label for="ingredient1" class="ml-2">yes</label>
+                    </div>
+
+                    <div class="flex align-items-center">
+                        <p-radioButton name="Approval" value=4 [(ngModel)]="obj.Approval"
+                            inputId="ingredient2"></p-radioButton>
+                        <label for="ingredient2" class="ml-2">No</label>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class=" flex justify-content-center">
+                <div class="flex flex-wrap gap-3">
+                    <label ><b>Authority Required:</b></label><br>
+                    <div class="flex align-items-center">
+                        <p-radioButton name="Authority" value=3 [(ngModel)]="obj.Authority"
+                            inputId="ingredient3"></p-radioButton>
+                        <label for="ingredient3" class="ml-2">yes</label>
+                    </div>
+
+                    <div class="flex align-items-center">
+                        <p-radioButton name="Authority" value=4 [(ngModel)]="obj.Authority"
+                            inputId="ingredient4"></p-radioButton>
+                        <label for="ingredient4" class="ml-2">No</label>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div>
+            <label for="status"><b>Status:</b></label>
+            <app-droupdown id="status" placeholder="select status" [options]="status" [(dropModels)]="obj.status" optionValue="id" ></app-droupdown>
+        </div>
+        <div>
+            <label><b>Remarks:</b></label><br>
+            <textarea rows="5" cols="30" pInputTextarea placeholder="Remarks" [(ngModel)]="obj.remarks"></textarea>
+        </div>
+
+
+    </div>
+</p-card>

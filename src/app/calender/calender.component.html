@@ -1,0 +1,6 @@
+<div >
+    
+    <p-calendar [(ngModel)]="calModel" [showIcon]="true" inputId="buttondisplay" class='m-2' placeholder="select date" [disabled]="disabled"
+    (blur)="onBlurControl($event)" (ngModelChange)="updateCalModel($event)"></p-calendar>
+</div>
+<span class="text-danger"  >{{errorMessage}}</span>

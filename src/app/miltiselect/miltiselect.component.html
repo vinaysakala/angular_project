@@ -1,0 +1,14 @@
+<!-- <p-multiSelect [options]="cities" [(ngModel)]="multiselect"  placeholder="Select Cities" optionLabel="name"  
+[showClear]="true"  (blur)="onBlurControl($event)" (ngModelChange)="send($event)"></p-multiSelect> -->
+
+
+    <!-- <p-multiSelect [options]="cities" [(ngModel)]="multiselect" placeholder="Select Cities" optionLabel="name"
+    [showClear]="false" [style]="{'width':'250px'}"  (blur)="onBlurControl($event)" (ngModelChange)="send($event)"></p-multiSelect> -->
+
+  
+    <p-multiSelect [options]="cities" [(ngModel)]="multiselect" placeholder="Select Cities" optionLabel="name" optionValue="code" [disabled]="disabled"
+    [maxSelectedLabels]="0" selectedItemsLabel="{0} items selected" [style]="{'width':'250px'}" (blur)="onBlurControl($event)" (ngModelChange)="send($event)">
+    </p-multiSelect>
+
+<span class="text-danger"  >{{errorMessage}}</span>
+  

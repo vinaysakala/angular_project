@@ -1,0 +1,81 @@
+<!-- 
+<div class="card">
+    <p-table [value]="sales" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th rowspan="3">Product</th>
+                <th colspan="4">Sale Rate</th>
+            </tr>
+            <tr>
+                <th colspan="2">Sales</th>
+                <th colspan="2">Profits</th>
+            </tr>
+            <tr>
+                <th>Last Year</th>
+                <th>This Year</th>
+                <th>Last Year</th>
+                <th>This Year</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-sale>
+            <tr>
+                <td>{{sale.product}}</td>
+                <td>{{sale.lastYearSale}}%</td>
+                <td>{{sale.thisYearSale}}%</td>
+                <td>{{sale.lastYearProfit | currency: 'USD'}}</td>
+                <td>{{sale.thisYearProfit | currency: 'USD'}}</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <tr>
+                <td colspan="3" class="text-right">Totals</td>
+                <td>{{lastYearTotal | currency: 'USD'}}</td>
+                <td>{{thisYearTotal | currency: 'USD'}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div> -->
+<!-- grouped-column-table.component.html -->
+
+<!-- grouped-column-table.component.html -->
+
+
+
+<p-table  [value]="yourData">
+   
+    <ng-template pTemplate="header" let-columns>            
+        <tr>
+            <th rowspan="3">employee Name</th>
+            <ng-container *ngFor="let header of mainheader">
+                <th colspan="10">{{header}}</th> 
+            </ng-container>
+
+        </tr>
+        <tr>
+            <ng-container *ngFor="let header of mainheader">
+                <ng-container *ngFor="let header1 of columnHeaders">
+                    <th colspan="2">{{ header1 }}</th>
+                </ng-container> 
+            </ng-container>
+        </tr> 
+        <tr>
+            <ng-container *ngFor="let header of mainheader">
+                <ng-container *ngFor="let header1 of columnHeaders">
+                    <th >Taken</th>
+                    <th >Balance</th>
+                </ng-container>
+            </ng-container>
+        </tr>
+
+    </ng-template>
+    <ng-template pTemplate="body" let-leave>
+            <tr>
+                <td>vinay</td>
+                <td>{{leave.lastYearSale}}</td>
+                <td>{{leave.thisYearSale}}</td>
+            </tr>
+           
+           
+    </ng-template>
+
+</p-table>
