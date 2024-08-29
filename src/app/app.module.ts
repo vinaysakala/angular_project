@@ -37,6 +37,7 @@ import { MyNewDirectiveDirective } from './directive/my-new-directive.directive'
 import { TimerComponent } from './timer/timer.component';
 import { ThapaswiService } from './thapaswi.service';
 import { CustompipePipe } from './custompipe.pipe';
+import { Calendartimer12hrsComponent } from './calendartimer12hrs/calendartimer12hrs.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import { CustompipePipe } from './custompipe.pipe';
          MyNewDirectiveDirective,
          TimerComponent,
          CustompipePipe,
-        
+         Calendartimer12hrsComponent
   ],
   imports: [
     BrowserModule,

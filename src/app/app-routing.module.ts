@@ -14,6 +14,7 @@ import { ChartComponent } from './chart/chart.component';
 import { GroupcoloumntableComponent } from './groupcoloumntable/groupcoloumntable.component';
 import { DisplaygroupcoloumtableComponent } from './displaygroupcoloumtable/displaygroupcoloumtable.component';
 import { TimerComponent } from './timer/timer.component';
+import { Calendartimer12hrsComponent } from './calendartimer12hrs/calendartimer12hrs.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'mod',pathMatch:'full'},
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path:'c',component:ChartComponent},
   {path:'g',component:GroupcoloumntableComponent},
   {path:'gc',component:DisplaygroupcoloumtableComponent},
-  {path:'t',component:TimerComponent}
+  {path:'t',component:TimerComponent},
+  {path:'timer',component:Calendartimer12hrsComponent}
 ];
 
 @NgModule({

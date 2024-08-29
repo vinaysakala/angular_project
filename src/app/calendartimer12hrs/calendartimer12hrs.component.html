@@ -1,0 +1,15 @@
+
+<p-calendar [(ngModel)]="calModel" [showIcon]="true"  class='m-2' placeholder="select date" [timeOnly]="true" [hourFormat]="'12'"></p-calendar>
+
+
+<button (click)="onsave()">save</button>
+
+
+
+<p-calendar 
+    [(ngModel)]="selectedDate" 
+    [showIcon]="true"
+    [monthNavigator]="true" 
+    [yearNavigator]="true" 
+    dateFormat="mm/dd">
+</p-calendar>
