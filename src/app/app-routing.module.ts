@@ -15,9 +15,11 @@ import { GroupcoloumntableComponent } from './groupcoloumntable/groupcoloumntabl
 import { DisplaygroupcoloumtableComponent } from './displaygroupcoloumtable/displaygroupcoloumtable.component';
 import { TimerComponent } from './timer/timer.component';
 import { Calendartimer12hrsComponent } from './calendartimer12hrs/calendartimer12hrs.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'mod',pathMatch:'full'},
+  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path:'login',component:LoginComponent},
   {path:'form',component:FormComponent},
   {path:'form1',component:Form1Component},
   {path:'datalookup',component:DatalookupComponent},

@@ -38,6 +38,7 @@ import { TimerComponent } from './timer/timer.component';
 import { ThapaswiService } from './thapaswi.service';
 import { CustompipePipe } from './custompipe.pipe';
 import { Calendartimer12hrsComponent } from './calendartimer12hrs/calendartimer12hrs.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { Calendartimer12hrsComponent } from './calendartimer12hrs/calendartimer1
          MyNewDirectiveDirective,
          TimerComponent,
          CustompipePipe,
-         Calendartimer12hrsComponent
+         Calendartimer12hrsComponent,
+         LoginComponent
   ],
   imports: [
     BrowserModule,
